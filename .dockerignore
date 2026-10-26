@@ -1,0 +1,42 @@
+node_modules
+frontend/node_modules
+# 显式列出 backend/node_modules：一是让「后端也依赖 Node」这件事可见
+# （小红书签名引擎需要 crypto-js），二是避免阅读时误以为只忽略了前端。
+backend/node_modules
+frontend/dist
+# 包管理器缓存：只影响构建上下文体积，与运行无关
+.npm-cache
+.uv-cache
+# 日志文件
+*.log
+__pycache__
+*.pyc
+.git
+.gitignore
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+*.md
+MiroFish-main
+.vscode
+.idea
+.venv
+backend/.venv
+backend/data
+backend/runtime_settings.json
+.env.*
+backend/.env.*
+frontend/.env.*
+evals
+artifacts
+.codex
+.agents
+*.sqlite*
+*.db
+*.pem
+*.key
+
+# Public preview excludes the optional XHS signing implementation.
+backend/app/services/xhs_sign/
+backend/app/services/xhs_service.py
